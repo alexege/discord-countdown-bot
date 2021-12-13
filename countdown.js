@@ -28,6 +28,17 @@ client.on("messageCreate", message => {
         duration = arguments[1];
     }
 
+    if (command === 'commands' || command === 'help'){
+        message.channel.send(
+            "```commands: Lists all possible commands\n" +
+            "timer <timerName> <duration>: Creates a timer with a name you provide for the duration you set.\nLeave name blank for a default name.\n" +
+            "cancel <timerName>: Cancels the specified timer.\n" + 
+            "vote: Pulls up link for voting on Arkforever.com\n" + 
+            "servers: Pulls up link for server list for ArkForever.com\n" + 
+            "status: Displays a list of all active/inactive timers.```"
+        )
+    }
+
     if (command === 'timer'){
         createNewTimer(timerName, duration, message);
     }
@@ -52,6 +63,14 @@ client.on("messageCreate", message => {
         let names = [];
         names.push(arguments[1]);
         // timersDict[name].alertList = alertList;
+    }
+
+    if (command == 'vote'){
+        message.reply('https://ark-servers.net/server/277519/vote/');
+    }
+
+    if (command == 'servers'){
+        message.reply('https://discord.com/channels/689807338839736342/692716072650014810/692716597344862228');
     }
 
     if (command === 'status'){
