@@ -30,12 +30,13 @@ client.on("messageCreate", message => {
 
     if (command === 'commands' || command === 'help'){
         message.channel.send(
-            "```commands: Lists all possible commands\n" +
-            "timer <timerName> <duration>: Creates a timer with a name you provide for the duration you set.\nLeave name blank for a default name.\n" +
-            "cancel <timerName>: Cancels the specified timer.\n" + 
-            "vote: Pulls up link for voting on Arkforever.com\n" + 
-            "servers: Pulls up link for server list for ArkForever.com\n" + 
-            "status: Displays a list of all active/inactive timers.```"
+            "```=========== Bot Commands ===========\n\n" + 
+            "commands:\t\t Lists all possible commands\n" +
+            "timer <timerName> <duration>:\t\t Creates a timer with a name you provide for the duration you set.\nLeave name blank for a default name.\n" +
+            "cancel <timerName>:\t\t Cancels the specified timer.\n" + 
+            "vote:\t\t Pulls up link for voting on Arkforever.com\n" + 
+            "servers:\t\t Pulls up link for server list for ArkForever.com\n" + 
+            "status:\t\t Displays a list of all active/inactive timers.```"
         )
     }
 
