@@ -1,6 +1,6 @@
 const config = require('dotenv').config();
 
-const { Client, Intents, MessageSelectMenu } = require('discord.js');
+const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 var conf = { prefix: "!" }
 
